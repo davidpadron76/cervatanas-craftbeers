@@ -36,7 +36,6 @@
         .logo-image {
             width: 60px;
             height: 60px;
-            filter: brightness(0) invert(1);
         }
 
         .logo-text {
@@ -311,114 +310,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <svg class="logo-image" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#f4a261" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0 0 114.6 0 256s114.6 256 256 256zm0-464c114.9 0 208 93.1 208 208s-93.1 208-208 208S48 370.9 48 256 141.1 48 256 48z"/>
-                
-                <!-- Granos de cebada (izquierda) -->
-                <ellipse fill="#f4a261" cx="90" cy="120" rx="12" ry="18" transform="rotate(-30 90 120)"/>
-                <ellipse fill="#f4a261" cx="70" cy="90" rx="12" ry="18" transform="rotate(-40 70 90)"/>
-                <ellipse fill="#f4a261" cx="55" cy="160" rx="12" ry="18" transform="rotate(-20 55 160)"/>
-                <ellipse fill="#f4a261" cx="75" cy="200" rx="12" ry="18" transform="rotate(-10 75 200)"/>
-                <ellipse fill="#f4a261" cx="60" cy="240" rx="12" ry="18" transform="rotate(10 60 240)"/>
-                <ellipse fill="#f4a261" cx="80" cy="280" rx="12" ry="18" transform="rotate(20 80 280)"/>
-                
-                <!-- Granos de cebada (derecha) -->
-                <ellipse fill="#f4a261" cx="422" cy="120" rx="12" ry="18" transform="rotate(30 422 120)"/>
-                <ellipse fill="#f4a261" cx="442" cy="90" rx="12" ry="18" transform="rotate(40 442 90)"/>
-                <ellipse fill="#f4a261" cx="457" cy="160" rx="12" ry="18" transform="rotate(20 457 160)"/>
-                <ellipse fill="#f4a261" cx="437" cy="200" rx="12" ry="18" transform="rotate(10 437 200)"/>
-                <ellipse fill="#f4a261" cx="452" cy="240" rx="12" ry="18" transform="rotate(-10 452 240)"/>
-                <ellipse fill="#f4a261" cx="432" cy="280" rx="12" ry="18" transform="rotate(-20 432 280)"/>
-                
-                <!-- Hojas de lúpulo (izquierda) -->
-                <path fill="#f4a261" d="M100 320c-8 0-12-8-8-14 4-6 12-6 16 0 4 6 0 14-8 14z"/>
-                <path fill="#f4a261" d="M95 340c-8 0-12-8-8-14 4-6 12-6 16 0 4 6 0 14-8 14z"/>
-                <path fill="#f4a261" d="M90 360c-8 0-12-8-8-14 4-6 12-6 16 0 4 6 0 14-8 14z"/>
-                
-                <!-- Hojas de lúpulo (derecha) -->
-                <path fill="#f4a261" d="M412 320c8 0 12-8 8-14-4-6-12-6-16 0-4 6 0 14 8 14z"/>
-                <path fill="#f4a261" d="M417 340c8 0 12-8 8-14-4-6-12-6-16 0-4 6 0 14 8 14z"/>
-                <path fill="#f4a261" d="M422 360c8 0 12-8 8-14-4-6-12-6-16 0-4 6 0 14 8 14z"/>
-                
-                <!-- Rayos de luz -->
-                <g fill="#f4a261" opacity="0.3">
-                    <polygon points="256,80 246,200 266,200"/>
-                    <polygon points="310,95 250,190 270,210"/>
-                    <polygon points="360,125 260,185 275,210"/>
-                    <polygon points="395,170 270,200 280,220"/>
-                    <polygon points="415,225 280,215 285,235"/>
-                    <polygon points="395,280 280,235 280,255"/>
-                    <polygon points="360,325 275,250 270,275"/>
-                    <polygon points="310,355 270,260 250,275"/>
-                    <polygon points="256,380 266,260 246,260"/>
-                    <polygon points="202,355 242,260 262,275"/>
-                    <polygon points="152,325 237,250 242,275"/>
-                    <polygon points="117,280 232,235 232,255"/>
-                    <polygon points="97,225 232,215 227,235"/>
-                    <polygon points="117,170 242,200 232,220"/>
-                    <polygon points="152,125 252,185 237,210"/>
-                    <polygon points="202,95 262,190 242,210"/>
-                </g>
-                
-                <!-- Cuerpo del búho -->
-                <ellipse fill="#2d2416" cx="256" cy="280" rx="90" ry="110"/>
-                
-                <!-- Ala izquierda -->
-                <path fill="#2d2416" d="M166 250c-20 0-35 20-30 45 5 25 20 35 30 30 10-5 10-25 5-45-5-20-5-30-5-30z"/>
-                
-                <!-- Ala derecha -->
-                <path fill="#2d2416" d="M346 250c20 0 35 20 30 45-5 25-20 35-30 30-10-5-10-25-5-45 5-20 5-30 5-30z"/>
-                
-                <!-- Ojos blancos -->
-                <circle fill="white" cx="220" cy="240" r="36"/>
-                <circle fill="white" cx="292" cy="240" r="36"/>
-                
-                <!-- Pupilas -->
-                <circle fill="#2d2416" cx="220" cy="240" r="20"/>
-                <circle fill="#2d2416" cx="292" cy="240" r="20"/>
-                
-                <!-- Brillos en los ojos -->
-                <circle fill="white" cx="225" cy="235" r="8"/>
-                <circle fill="white" cx="297" cy="235" r="8"/>
-                
-                <!-- Cejas/orejas -->
-                <path fill="white" stroke="white" stroke-width="6" d="M195 210c-15-20-10-35 0-40"/>
-                <path fill="white" stroke="white" stroke-width="6" d="M317 210c15-20 10-35 0-40"/>
-                
-                <!-- Pico -->
-                <path fill="#f4a261" d="M256 255l-15 20h30z"/>
-                
-                <!-- Sonrisa -->
-                <path fill="none" stroke="white" stroke-width="4" d="M210 290c15 20 31 20 46 20s31 0 46-20"/>
-                
-                <!-- Plumas del pecho (fila 1) -->
-                <ellipse fill="white" cx="220" cy="300" rx="16" ry="10"/>
-                <ellipse fill="white" cx="256" cy="300" rx="16" ry="10"/>
-                <ellipse fill="white" cx="292" cy="300" rx="16" ry="10"/>
-                
-                <!-- Plumas del pecho (fila 2) -->
-                <ellipse fill="white" cx="210" cy="320" rx="16" ry="10"/>
-                <ellipse fill="white" cx="240" cy="320" rx="16" ry="10"/>
-                <ellipse fill="white" cx="272" cy="320" rx="16" ry="10"/>
-                <ellipse fill="white" cx="302" cy="320" rx="16" ry="10"/>
-                
-                <!-- Plumas del pecho (fila 3) -->
-                <ellipse fill="white" cx="220" cy="340" rx="16" ry="10"/>
-                <ellipse fill="white" cx="256" cy="340" rx="16" ry="10"/>
-                <ellipse fill="white" cx="292" cy="340" rx="16" ry="10"/>
-                
-                <!-- Patas -->
-                <ellipse fill="#2d2416" cx="230" cy="380" rx="16" ry="12"/>
-                <ellipse fill="#2d2416" cx="282" cy="380" rx="16" ry="12"/>
-                
-                <!-- Dedos de las patas -->
-                <line stroke="#2d2416" stroke-width="4" x1="220" y1="385" x2="210" y2="395"/>
-                <line stroke="#2d2416" stroke-width="4" x1="230" y1="385" x2="230" y2="395"/>
-                <line stroke="#2d2416" stroke-width="4" x1="240" y1="385" x2="250" y2="395"/>
-                <line stroke="#2d2416" stroke-width="4" x1="272" y1="385" x2="262" y2="395"/>
-                <line stroke="#2d2416" stroke-width="4" x1="282" y1="385" x2="282" y2="395"/>
-                <line stroke="#2d2416" stroke-width="4" x1="292" y1="385" x2="302" y2="395"/>
-            </svg>
+            <img src="logo1.jpg" alt="Cervatanas Logo" class="logo-image">
             <div class="logo-text">
                 <div class="logo-title">CERVATANAS</div>
                 <div class="logo-subtitle">CRAFT BEERS</div>
