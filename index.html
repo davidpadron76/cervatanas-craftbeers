@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cervatanas Craft Beers - Certificación Cicerone®</title>
+    <title>Cervatanas Craft Beers - Curso de Cerveza</title>
     <style>
         * {
             margin: 0;
@@ -27,10 +27,35 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            filter: brightness(0) invert(1);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
             font-size: 1.8rem;
             font-weight: bold;
             color: #f4a261;
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.8rem;
+            color: #f4a261;
+            opacity: 0.8;
+            letter-spacing: 2px;
         }
 
         .hero {
@@ -91,21 +116,31 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: #2d2416;
         }
 
-        .benefits {
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .target {
             background: #f9f9f9;
         }
 
-        .benefits-grid {
+        .target-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
-        .benefit-card {
+        .target-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
@@ -113,65 +148,104 @@
             transition: transform 0.3s ease;
         }
 
-        .benefit-card:hover {
+        .target-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
-        .benefit-icon {
+        .target-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        .benefit-card h3 {
+        .target-card h3 {
             color: #2d2416;
             margin-bottom: 0.5rem;
         }
 
-        .course-info {
+        .learning {
             background: white;
         }
 
-        .info-grid {
+        .learning-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
-        .info-item {
+        .learning-item {
             padding: 1.5rem;
             background: #f9f9f9;
             border-left: 4px solid #e76f51;
             border-radius: 5px;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
         }
 
-        .info-item h4 {
-            color: #2d2416;
-            margin-bottom: 0.5rem;
+        .learning-item .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
         }
 
-        .testimonials {
+        .learning-item p {
+            margin: 0;
+        }
+
+        .includes {
             background: linear-gradient(135deg, #2d2416 0%, #1a1a1a 100%);
             color: white;
         }
 
-        .testimonial-card {
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .include-card {
             background: rgba(255,255,255,0.1);
             padding: 2rem;
             border-radius: 10px;
-            margin-bottom: 2rem;
             backdrop-filter: blur(10px);
+            text-align: center;
         }
 
-        .testimonial-card p {
-            font-style: italic;
+        .include-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        .testimonial-author {
-            font-weight: bold;
+        .include-card h3 {
             color: #f4a261;
+            margin-bottom: 0.5rem;
+        }
+
+        .bonus {
+            background: #f9f9f9;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .bonus-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .bonus h3 {
+            color: #e76f51;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .bonus p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .cta-section {
@@ -184,6 +258,11 @@
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         footer {
@@ -205,108 +284,271 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .learning-list {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-container {
+                gap: 0.5rem;
+            }
+
+            .logo-image {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo-title {
+                font-size: 1.3rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.6rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">🍺 Cervatanas Craft Beers</div>
+        <div class="logo-container">
+            <svg class="logo-image" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#f4a261" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0 0 114.6 0 256s114.6 256 256 256zm0-464c114.9 0 208 93.1 208 208s-93.1 208-208 208S48 370.9 48 256 141.1 48 256 48z"/>
+                
+                <!-- Granos de cebada (izquierda) -->
+                <ellipse fill="#f4a261" cx="90" cy="120" rx="12" ry="18" transform="rotate(-30 90 120)"/>
+                <ellipse fill="#f4a261" cx="70" cy="90" rx="12" ry="18" transform="rotate(-40 70 90)"/>
+                <ellipse fill="#f4a261" cx="55" cy="160" rx="12" ry="18" transform="rotate(-20 55 160)"/>
+                <ellipse fill="#f4a261" cx="75" cy="200" rx="12" ry="18" transform="rotate(-10 75 200)"/>
+                <ellipse fill="#f4a261" cx="60" cy="240" rx="12" ry="18" transform="rotate(10 60 240)"/>
+                <ellipse fill="#f4a261" cx="80" cy="280" rx="12" ry="18" transform="rotate(20 80 280)"/>
+                
+                <!-- Granos de cebada (derecha) -->
+                <ellipse fill="#f4a261" cx="422" cy="120" rx="12" ry="18" transform="rotate(30 422 120)"/>
+                <ellipse fill="#f4a261" cx="442" cy="90" rx="12" ry="18" transform="rotate(40 442 90)"/>
+                <ellipse fill="#f4a261" cx="457" cy="160" rx="12" ry="18" transform="rotate(20 457 160)"/>
+                <ellipse fill="#f4a261" cx="437" cy="200" rx="12" ry="18" transform="rotate(10 437 200)"/>
+                <ellipse fill="#f4a261" cx="452" cy="240" rx="12" ry="18" transform="rotate(-10 452 240)"/>
+                <ellipse fill="#f4a261" cx="432" cy="280" rx="12" ry="18" transform="rotate(-20 432 280)"/>
+                
+                <!-- Hojas de lúpulo (izquierda) -->
+                <path fill="#f4a261" d="M100 320c-8 0-12-8-8-14 4-6 12-6 16 0 4 6 0 14-8 14z"/>
+                <path fill="#f4a261" d="M95 340c-8 0-12-8-8-14 4-6 12-6 16 0 4 6 0 14-8 14z"/>
+                <path fill="#f4a261" d="M90 360c-8 0-12-8-8-14 4-6 12-6 16 0 4 6 0 14-8 14z"/>
+                
+                <!-- Hojas de lúpulo (derecha) -->
+                <path fill="#f4a261" d="M412 320c8 0 12-8 8-14-4-6-12-6-16 0-4 6 0 14 8 14z"/>
+                <path fill="#f4a261" d="M417 340c8 0 12-8 8-14-4-6-12-6-16 0-4 6 0 14 8 14z"/>
+                <path fill="#f4a261" d="M422 360c8 0 12-8 8-14-4-6-12-6-16 0-4 6 0 14 8 14z"/>
+                
+                <!-- Rayos de luz -->
+                <g fill="#f4a261" opacity="0.3">
+                    <polygon points="256,80 246,200 266,200"/>
+                    <polygon points="310,95 250,190 270,210"/>
+                    <polygon points="360,125 260,185 275,210"/>
+                    <polygon points="395,170 270,200 280,220"/>
+                    <polygon points="415,225 280,215 285,235"/>
+                    <polygon points="395,280 280,235 280,255"/>
+                    <polygon points="360,325 275,250 270,275"/>
+                    <polygon points="310,355 270,260 250,275"/>
+                    <polygon points="256,380 266,260 246,260"/>
+                    <polygon points="202,355 242,260 262,275"/>
+                    <polygon points="152,325 237,250 242,275"/>
+                    <polygon points="117,280 232,235 232,255"/>
+                    <polygon points="97,225 232,215 227,235"/>
+                    <polygon points="117,170 242,200 232,220"/>
+                    <polygon points="152,125 252,185 237,210"/>
+                    <polygon points="202,95 262,190 242,210"/>
+                </g>
+                
+                <!-- Cuerpo del búho -->
+                <ellipse fill="#2d2416" cx="256" cy="280" rx="90" ry="110"/>
+                
+                <!-- Ala izquierda -->
+                <path fill="#2d2416" d="M166 250c-20 0-35 20-30 45 5 25 20 35 30 30 10-5 10-25 5-45-5-20-5-30-5-30z"/>
+                
+                <!-- Ala derecha -->
+                <path fill="#2d2416" d="M346 250c20 0 35 20 30 45-5 25-20 35-30 30-10-5-10-25-5-45 5-20 5-30 5-30z"/>
+                
+                <!-- Ojos blancos -->
+                <circle fill="white" cx="220" cy="240" r="36"/>
+                <circle fill="white" cx="292" cy="240" r="36"/>
+                
+                <!-- Pupilas -->
+                <circle fill="#2d2416" cx="220" cy="240" r="20"/>
+                <circle fill="#2d2416" cx="292" cy="240" r="20"/>
+                
+                <!-- Brillos en los ojos -->
+                <circle fill="white" cx="225" cy="235" r="8"/>
+                <circle fill="white" cx="297" cy="235" r="8"/>
+                
+                <!-- Cejas/orejas -->
+                <path fill="white" stroke="white" stroke-width="6" d="M195 210c-15-20-10-35 0-40"/>
+                <path fill="white" stroke="white" stroke-width="6" d="M317 210c15-20 10-35 0-40"/>
+                
+                <!-- Pico -->
+                <path fill="#f4a261" d="M256 255l-15 20h30z"/>
+                
+                <!-- Sonrisa -->
+                <path fill="none" stroke="white" stroke-width="4" d="M210 290c15 20 31 20 46 20s31 0 46-20"/>
+                
+                <!-- Plumas del pecho (fila 1) -->
+                <ellipse fill="white" cx="220" cy="300" rx="16" ry="10"/>
+                <ellipse fill="white" cx="256" cy="300" rx="16" ry="10"/>
+                <ellipse fill="white" cx="292" cy="300" rx="16" ry="10"/>
+                
+                <!-- Plumas del pecho (fila 2) -->
+                <ellipse fill="white" cx="210" cy="320" rx="16" ry="10"/>
+                <ellipse fill="white" cx="240" cy="320" rx="16" ry="10"/>
+                <ellipse fill="white" cx="272" cy="320" rx="16" ry="10"/>
+                <ellipse fill="white" cx="302" cy="320" rx="16" ry="10"/>
+                
+                <!-- Plumas del pecho (fila 3) -->
+                <ellipse fill="white" cx="220" cy="340" rx="16" ry="10"/>
+                <ellipse fill="white" cx="256" cy="340" rx="16" ry="10"/>
+                <ellipse fill="white" cx="292" cy="340" rx="16" ry="10"/>
+                
+                <!-- Patas -->
+                <ellipse fill="#2d2416" cx="230" cy="380" rx="16" ry="12"/>
+                <ellipse fill="#2d2416" cx="282" cy="380" rx="16" ry="12"/>
+                
+                <!-- Dedos de las patas -->
+                <line stroke="#2d2416" stroke-width="4" x1="220" y1="385" x2="210" y2="395"/>
+                <line stroke="#2d2416" stroke-width="4" x1="230" y1="385" x2="230" y2="395"/>
+                <line stroke="#2d2416" stroke-width="4" x1="240" y1="385" x2="250" y2="395"/>
+                <line stroke="#2d2416" stroke-width="4" x1="272" y1="385" x2="262" y2="395"/>
+                <line stroke="#2d2416" stroke-width="4" x1="282" y1="385" x2="282" y2="395"/>
+                <line stroke="#2d2416" stroke-width="4" x1="292" y1="385" x2="302" y2="395"/>
+            </svg>
+            <div class="logo-text">
+                <div class="logo-title">CERVATANAS</div>
+                <div class="logo-subtitle">CRAFT BEERS</div>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Programa de Preparación para el Examen de<br>Certified Beer Server® Cicerone®</h1>
-        <p class="subtitle">Tu puerta de entrada al prestigioso mundo de la certificación cervecera</p>
-        <p>¡Descubre el mundo de la cerveza con expertise y confianza! Si eres mesero, bartender, sommelier en ciernes o simplemente un apasionado de la cerveza artesanal, nuestro Programa de Preparación para el Examen de Certified Beer Server® es tu puerta de entrada al prestigioso Programa de Certificación Cicerone®. Este curso intensivo te equipa con todo lo necesario para aprobar el examen de primer nivel y convertirte en un servidor de cerveza certificado, elevando tu carrera en la industria cervecera.</p>
-        <a href="#inscripcion" class="cta-button">¡Inscríbete Ahora!</a>
+        <h1>Aprende a Entender la Cerveza</h1>
+        <p class="subtitle">De "me gusta" a "sé por qué me gusta"</p>
+        <p>Si te gusta la cerveza —servirla, recomendarla o simplemente disfrutarla— este curso te va a encantar. Está diseñado para quienes quieren entender de verdad lo que están sirviendo o tomando.</p>
+        <a href="#inscripcion" class="cta-button">¡Quiero Inscribirme!</a>
     </section>
 
-    <section class="benefits">
+    <section class="target">
         <div class="container">
-            <h2 class="section-title">¿Por Qué Certificarte con Nosotros?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎓</div>
-                    <h3>Certificación Reconocida</h3>
-                    <p>El Programa Cicerone® es el estándar de oro en la industria cervecera mundial, reconocido internacionalmente.</p>
+            <h2 class="section-title">¿Este Curso Es Para Ti?</h2>
+            <p class="section-subtitle">Ideal para cualquier persona apasionada por la cerveza, sin importar tu nivel actual</p>
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-icon">🍽️</div>
+                    <h3>Meseros y Personal de Servicio</h3>
+                    <p>Explica estilos con seguridad y ofrece recomendaciones acertadas a tus clientes.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Impulsa Tu Carrera</h3>
-                    <p>Diferénciate en el mercado laboral y accede a mejores oportunidades en restaurantes, bares y cervecerías.</p>
+                <div class="target-card">
+                    <div class="target-icon">🍸</div>
+                    <h3>Bartenders</h3>
+                    <p>Eleva tu nivel de recomendación y domina el arte del servicio perfecto.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">👨‍🏫</div>
-                    <h3>Instructores Expertos</h3>
-                    <p>Aprende de profesionales certificados con amplia experiencia en la industria cervecera artesanal.</p>
+                <div class="target-card">
+                    <div class="target-icon">🏪</div>
+                    <h3>Personal de Tiendas</h3>
+                    <p>Comprende por qué una cerveza vale más que otra y asesora con conocimiento.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💻</div>
-                    <h3>Formato Online Flexible</h3>
-                    <p>Estudia a tu propio ritmo, desde cualquier lugar, con acceso 24/7 a todos los materiales del curso.</p>
+                <div class="target-card">
+                    <div class="target-icon">⚗️</div>
+                    <h3>Homebrewers</h3>
+                    <p>Entrena tu paladar y evalúa tus propias creaciones con criterio profesional.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📚</div>
-                    <h3>Material Completo</h3>
-                    <p>Accede a guías de estudio, videos, cuestionarios de práctica y recursos exclusivos actualizados.</p>
+                <div class="target-card">
+                    <div class="target-icon">❤️</div>
+                    <h3>Aficionados</h3>
+                    <p>Pasa de disfrutar la cerveza a comprenderla profundamente.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">✅</div>
-                    <h3>Alta Tasa de Aprobación</h3>
-                    <p>Nuestros estudiantes tienen una tasa de aprobación superior al promedio nacional del examen.</p>
+                <div class="target-card">
+                    <div class="target-icon">🎯</div>
+                    <h3>Curiosos</h3>
+                    <p>No necesitas experiencia previa. Solo curiosidad, ganas de aprender y amor por la cerveza.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="course-info">
+    <section class="learning">
         <div class="container">
-            <h2 class="section-title">Contenido del Curso</h2>
-            <div class="info-grid">
-                <div class="info-item">
-                    <h4>📖 Módulo 1: Fundamentos</h4>
-                    <p>Historia de la cerveza, ingredientes básicos y proceso de elaboración</p>
+            <h2 class="section-title">¿Qué Vas a Aprender?</h2>
+            <p class="section-subtitle">En pocas semanas dominarás las habilidades esenciales del mundo cervecero</p>
+            <div class="learning-list">
+                <div class="learning-item">
+                    <div class="icon">🍺</div>
+                    <p><strong>Distinguir estilos con claridad:</strong> Lager, IPA, Sour, Stout y muchos más. Sabrás identificarlos y explicar sus diferencias.</p>
                 </div>
-                <div class="info-item">
-                    <h4>🍺 Módulo 2: Estilos</h4>
-                    <p>Identificación y características de los principales estilos cerveceros</p>
+                <div class="learning-item">
+                    <div class="icon">👨‍🍳</div>
+                    <p><strong>Servir como un profesional:</strong> Espuma estable, temperatura correcta y cristalería impecable para cada estilo.</p>
                 </div>
-                <div class="info-item">
-                    <h4>👃 Módulo 3: Servicio</h4>
-                    <p>Técnicas de servicio, temperatura, cristalería y maridaje</p>
+                <div class="learning-item">
+                    <div class="icon">🔍</div>
+                    <p><strong>Identificar defectos:</strong> Detecta cuándo una cerveza no está en buen estado y aprende a reconocer problemas comunes.</p>
                 </div>
-                <div class="info-item">
-                    <h4>🔍 Módulo 4: Calidad</h4>
-                    <p>Evaluación sensorial, defectos comunes y almacenamiento adecuado</p>
+                <div class="learning-item">
+                    <div class="icon">💬</div>
+                    <p><strong>Describir con precisión:</strong> Aromas, sabores y sensaciones con un lenguaje profesional y atractivo.</p>
+                </div>
+                <div class="learning-item">
+                    <div class="icon">⭐</div>
+                    <p><strong>Evaluar sensorialmente:</strong> Usa los criterios que emplea la industria para juzgar la calidad de una cerveza.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="includes">
         <div class="container">
-            <h2 class="section-title">Lo Que Dicen Nuestros Estudiantes</h2>
-            <div class="testimonial-card">
-                <p>"Gracias a este curso, aprobé el examen en mi primer intento. El material es excelente y los instructores están siempre dispuestos a ayudar."</p>
-                <div class="testimonial-author">- María González, Bartender Certificada</div>
+            <h2 class="section-title">El Curso Incluye</h2>
+            <div class="includes-grid">
+                <div class="include-card">
+                    <div class="include-icon">📹</div>
+                    <h3>Clases Online</h3>
+                    <p>Videos cortos y al grano que puedes ver cuando quieras, a tu ritmo.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">🥂</div>
+                    <h3>Catas Guiadas</h3>
+                    <p>Desde casa, con recomendaciones exactas de qué cervezas comprar para cada sesión.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">📝</div>
+                    <h3>Ejercicios Prácticos</h3>
+                    <p>Entrenamiento sensorial y cuestionarios de práctica para reforzar tu aprendizaje.</p>
+                </div>
+                <div class="include-card">
+                    <div class="include-icon">👥</div>
+                    <h3>Grupo de Apoyo</h3>
+                    <p>Comparte dudas, hallazgos y buenas cervezas con otros estudiantes apasionados.</p>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"Como sommelier de vinos, quería expandir mis conocimientos. Este programa fue perfecto para entender el mundo cervecero con profundidad."</p>
-                <div class="testimonial-author">- Carlos Mendoza, Sommelier</div>
-            </div>
+        </div>
+    </section>
+
+    <section class="bonus">
+        <div class="bonus-content">
+            <h3>🎓 Bonus: Prepárate para la Certificación Cicerone®</h3>
+            <p>Si después del curso quieres dar el siguiente paso, este programa te prepara perfectamente para el examen de <strong>Certified Beer Server® Cicerone®</strong>, la certificación más reconocida internacionalmente en el mundo de la cerveza. Pero no es obligatorio: puedes tomar el curso simplemente para aprender y disfrutar más de tu pasión.</p>
         </div>
     </section>
 
     <section class="cta-section" id="inscripcion">
         <div class="container">
-            <h2>¡Comienza Tu Camino Hacia la Certificación!</h2>
-            <p style="font-size: 1.2rem; margin: 1rem 0 2rem;">Únete a nuestra próxima cohorte y da el primer paso hacia tu certificación Cicerone®</p>
-            <a href="mailto:info@cervatanas.com" class="cta-button" style="background: white; color: #e76f51;">Contactar Ahora</a>
+            <h2>¡Brinda con Conocimiento! 🍻</h2>
+            <p>Únete a nuestra próxima cohorte y transforma tu relación con la cerveza</p>
+            <p style="font-size: 1rem; margin-bottom: 2rem;">Si quieres más información sobre fechas, precios y modalidad, envíanos un mensaje</p>
+            <a href="https://wa.me/5930999999999?text=Hola,%20quiero%20información%20sobre%20el%20curso%20de%20cerveza" class="cta-button" style="background: white; color: #e76f51; margin-right: 1rem;">WhatsApp</a>
+            <a href="mailto:contacto@cervatanas.com" class="cta-button" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);">Email</a>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Cervatanas Craft Beers. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Cicerone® es una marca registrada del Cicerone Certification Program</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">El Programa de Certificación Cicerone® es una marca registrada</p>
     </footer>
 </body>
 </html>
