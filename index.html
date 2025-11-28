@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervatanas Craft Beers - Certificación Cicerone®</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f4a261;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232d2416" width="1200" height="600"/><circle cx="200" cy="150" r="80" fill="%23f4a261" opacity="0.1"/><circle cx="900" cy="400" r="120" fill="%23e76f51" opacity="0.1"/><circle cx="600" cy="300" r="100" fill="%23f4a261" opacity="0.15"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #f4a261;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e76f51;
+            color: white;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 111, 81, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #d45a3c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 111, 81, 0.6);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d2416;
+        }
+
+        .benefits {
+            background: #f9f9f9;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: #2d2416;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-info {
+            background: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-left: 4px solid #e76f51;
+            border-radius: 5px;
+        }
+
+        .info-item h4 {
+            color: #2d2416;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, #2d2416 0%, #1a1a1a 100%);
+            color: white;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #f4a261;
+        }
+
+        .cta-section {
+            background: #e76f51;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🍺 Cervatanas Craft Beers</div>
+    </header>
+
+    <section class="hero">
+        <h1>Programa de Preparación para el Examen de<br>Certified Beer Server® Cicerone®</h1>
+        <p class="subtitle">Tu puerta de entrada al prestigioso mundo de la certificación cervecera</p>
+        <p>¡Descubre el mundo de la cerveza con expertise y confianza! Si eres mesero, bartender, sommelier en ciernes o simplemente un apasionado de la cerveza artesanal, nuestro Programa de Preparación para el Examen de Certified Beer Server® es tu puerta de entrada al prestigioso Programa de Certificación Cicerone®. Este curso intensivo te equipa con todo lo necesario para aprobar el examen de primer nivel y convertirte en un servidor de cerveza certificado, elevando tu carrera en la industria cervecera.</p>
+        <a href="#inscripcion" class="cta-button">¡Inscríbete Ahora!</a>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Certificarte con Nosotros?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Certificación Reconocida</h3>
+                    <p>El Programa Cicerone® es el estándar de oro en la industria cervecera mundial, reconocido internacionalmente.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Impulsa Tu Carrera</h3>
+                    <p>Diferénciate en el mercado laboral y accede a mejores oportunidades en restaurantes, bares y cervecerías.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍🏫</div>
+                    <h3>Instructores Expertos</h3>
+                    <p>Aprende de profesionales certificados con amplia experiencia en la industria cervecera artesanal.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💻</div>
+                    <h3>Formato Online Flexible</h3>
+                    <p>Estudia a tu propio ritmo, desde cualquier lugar, con acceso 24/7 a todos los materiales del curso.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Material Completo</h3>
+                    <p>Accede a guías de estudio, videos, cuestionarios de práctica y recursos exclusivos actualizados.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Alta Tasa de Aprobación</h3>
+                    <p>Nuestros estudiantes tienen una tasa de aprobación superior al promedio nacional del examen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-info">
+        <div class="container">
+            <h2 class="section-title">Contenido del Curso</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📖 Módulo 1: Fundamentos</h4>
+                    <p>Historia de la cerveza, ingredientes básicos y proceso de elaboración</p>
+                </div>
+                <div class="info-item">
+                    <h4>🍺 Módulo 2: Estilos</h4>
+                    <p>Identificación y características de los principales estilos cerveceros</p>
+                </div>
+                <div class="info-item">
+                    <h4>👃 Módulo 3: Servicio</h4>
+                    <p>Técnicas de servicio, temperatura, cristalería y maridaje</p>
+                </div>
+                <div class="info-item">
+                    <h4>🔍 Módulo 4: Calidad</h4>
+                    <p>Evaluación sensorial, defectos comunes y almacenamiento adecuado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Estudiantes</h2>
+            <div class="testimonial-card">
+                <p>"Gracias a este curso, aprobé el examen en mi primer intento. El material es excelente y los instructores están siempre dispuestos a ayudar."</p>
+                <div class="testimonial-author">- María González, Bartender Certificada</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Como sommelier de vinos, quería expandir mis conocimientos. Este programa fue perfecto para entender el mundo cervecero con profundidad."</p>
+                <div class="testimonial-author">- Carlos Mendoza, Sommelier</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="inscripcion">
+        <div class="container">
+            <h2>¡Comienza Tu Camino Hacia la Certificación!</h2>
+            <p style="font-size: 1.2rem; margin: 1rem 0 2rem;">Únete a nuestra próxima cohorte y da el primer paso hacia tu certificación Cicerone®</p>
+            <a href="mailto:info@cervatanas.com" class="cta-button" style="background: white; color: #e76f51;">Contactar Ahora</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cervatanas Craft Beers. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Cicerone® es una marca registrada del Cicerone Certification Program</p>
+    </footer>
+</body>
+</html>
