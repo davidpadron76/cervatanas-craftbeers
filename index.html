@@ -229,7 +229,6 @@
         .bonus {
             background: #f9f9f9;
             padding: 3rem 2rem;
-            text-align: center;
         }
 
         .bonus-content {
@@ -250,6 +249,136 @@
         .bonus p {
             font-size: 1.1rem;
             line-height: 1.8;
+        }
+
+        .instructors {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .instructor-card {
+            text-align: center;
+        }
+
+        .instructor-cert {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .instructor-cert:hover {
+            transform: scale(1.05);
+        }
+
+        .instructor-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2d2416;
+            margin-bottom: 0.5rem;
+        }
+
+        .instructor-title {
+            color: #e76f51;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .course-details {
+            background: linear-gradient(135deg, #e76f51 0%, #d45a3c 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .details-box {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .detail-item {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+        }
+
+        .detail-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item p {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .discount-banner {
+            background: linear-gradient(135deg, #2d2416 0%, #1a1a1a 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 700px;
+            border: 3px solid #f4a261;
+            box-shadow: 0 8px 25px rgba(244, 162, 97, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .discount-code {
+            display: inline-block;
+            background: #f4a261;
+            color: #1a1a1a;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 1rem 0;
+            border: 3px dashed #2d2416;
+            font-family: 'Courier New', monospace;
+        }
+
+        .discount-text {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .discount-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
         }
 
         .cta-section {
@@ -327,6 +456,12 @@
         <h1>Aprende a Entender la Cerveza</h1>
         <p class="subtitle">De "me gusta" a "sé por qué me gusta"</p>
         <p>Si te gusta la cerveza —servirla, recomendarla o simplemente disfrutarla— este curso te va a encantar. Está diseñado para quienes quieren entender de verdad lo que están sirviendo o tomando.</p>
+        
+        <div style="background: rgba(244, 162, 97, 0.2); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 15px; margin: 2rem auto; max-width: 600px; border: 2px solid #f4a261;">
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">🎉 <strong>¡Descuento del 15% para primeros inscritos!</strong></p>
+            <p style="font-size: 1.4rem; font-weight: bold; color: #f4a261; letter-spacing: 2px;">Código: 15%OFF</p>
+        </div>
+        
         <a href="https://pay.hotmart.com/S103188921S" class="cta-button" target="_blank">¡Quiero Inscribirme!</a>
     </section>
 
@@ -431,6 +566,85 @@
             </div>
             <div class="cta-inline">
                 <a href="https://pay.hotmart.com/S103188921S" class="cta-button" target="_blank">Asegura Tu Lugar</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-details">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">📅 Próxima Edición del Curso</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">¡Únete a nuestra 3ra cohorte!</p>
+            
+            <div class="details-box">
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div class="detail-icon">📅</div>
+                        <h4>Inicio</h4>
+                        <p>15 de Diciembre</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🕖</div>
+                        <h4>Horario</h4>
+                        <p>7:00 PM</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📺</div>
+                        <h4>Modalidad</h4>
+                        <p>Clases en Vivo</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📆</div>
+                        <h4>Duración</h4>
+                        <p>5 Días</p>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.2); border-radius: 10px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🍺 Evento Final Especial</h3>
+                    <p style="font-size: 1.2rem;">Cerraremos el curso con un <strong>maridaje con cerveza</strong> para aplicar todo lo aprendido en una experiencia práctica inolvidable.</p>
+                </div>
+            </div>
+            
+            <div class="discount-banner">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎉 <strong>DESCUENTO EXCLUSIVO</strong> 🎉</div>
+                <p class="discount-text">¡Primeros inscritos obtienen 15% de descuento!</p>
+                <div class="discount-code">15%OFF</div>
+                <p class="discount-subtitle">Usa este código al momento de pagar en Hotmart</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">⏰ Oferta por tiempo limitado - ¡No te quedes fuera!</p>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <a href="https://pay.hotmart.com/S103188921S" class="cta-button" style="background: white; color: #e76f51; font-size: 1.3rem; padding: 1.2rem 3.5rem;" target="_blank">¡Reserva Tu Lugar con Descuento!</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="instructors">
+        <div class="container">
+            <h2 class="section-title">Tus Instructores Certificados</h2>
+            <p class="section-subtitle">Aprende de profesionales con certificación internacional Cicerone®</p>
+            
+            <div class="instructors-grid">
+                <div class="instructor-card">
+                    <img src="certificado-alvaro.jpg" alt="Certificado Álvaro David Padrón" class="instructor-cert">
+                    <div class="instructor-name">Álvaro David Padrón Rivero</div>
+                    <div class="instructor-title">Certified Beer Server® Cicerone®</div>
+                    <p style="margin-top: 1rem; color: #666;">Certificado desde Julio 2022</p>
+                </div>
+                
+                <div class="instructor-card">
+                    <img src="certificado-tedicel.jpg" alt="Certificado Tedicel Montilla" class="instructor-cert">
+                    <div class="instructor-name">Tedicel Montilla</div>
+                    <div class="instructor-title">Certified Beer Server® Cicerone®</div>
+                    <p style="margin-top: 1rem; color: #666;">Certificado desde Julio 2022</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f9f9f9; border-radius: 10px;">
+                <p style="font-size: 1.1rem; color: #2d2416; line-height: 1.8;">
+                    🏆 Ambos instructores han completado exitosamente el examen de <strong>Certified Beer Server® del Programa Cicerone®</strong>, 
+                    el estándar de oro en certificación cervecera reconocido internacionalmente. Su experiencia y conocimiento garantizan 
+                    una formación de calidad para prepararte en el fascinante mundo de la cerveza.
+                </p>
             </div>
         </div>
     </section>
