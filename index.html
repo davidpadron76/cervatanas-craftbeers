@@ -57,6 +57,25 @@
             letter-spacing: 2px;
         }
 
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(244, 162, 97, 0.2);
+            border-radius: 50%;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-icon:hover {
+            background: #f4a261;
+            transform: scale(1.1);
+        }
+
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
                         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232d2416" width="1200" height="600"/><circle cx="200" cy="150" r="80" fill="%23f4a261" opacity="0.1"/><circle cx="900" cy="400" r="120" fill="%23e76f51" opacity="0.1"/><circle cx="600" cy="300" r="100" fill="%23f4a261" opacity="0.15"/></svg>');
@@ -438,6 +457,13 @@
             .logo-subtitle {
                 font-size: 0.6rem;
             }
+
+            .social-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+                margin-left: 10px;
+            }
         }
     </style>
 </head>
@@ -449,6 +475,7 @@
                 <div class="logo-title">CERVATANAS</div>
                 <div class="logo-subtitle">CRAFT BEERS</div>
             </div>
+            <a href="https://www.instagram.com/cervecerosgye" target="_blank" class="social-icon" title="Síguenos en Instagram">📸</a>
         </div>
     </header>
 
