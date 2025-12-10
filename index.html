@@ -829,12 +829,10 @@
 
                 <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Descárgala ahora - Es 100% GRATIS 🎁</p>
 
-                <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <input type="text" name="name" placeholder="Tu nombre" required>
-                    <input type="email" name="email" placeholder="Tu email" required>
-                    <input type="hidden" name="_subject" value="Nueva descarga - Guía del Cervecero">
-                    <input type="hidden" name="_next" value="https://davidpadron76.github.io/cervatanas-craftbeers/gracias.html">
-                    <button type="submit">📥 Descargar Guía Gratis</button>
+                <form class="email-form" action="mailto:cervatanascraftbeers@gmail.com" method="post" enctype="text/plain">
+                  <input type="text" name="nombre" placeholder="Tu nombre" required>
+                  <input type="email" name="email" placeholder="Tu email" required>
+                  <button type="submit">📥 Descargar Guía Gratis</button>
                 </form>
 
                 <p class="privacy-note">🔒 Tu información está segura. No spam. Solo contenido de valor sobre cerveza.</p>
