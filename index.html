@@ -250,6 +250,114 @@
             padding: 3rem 2rem;
         }
 
+        .lead-magnet {
+            background: linear-gradient(135deg, #2d2416 0%, #1a1a1a 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .lead-magnet-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid #f4a261;
+        }
+
+        .lead-magnet h2 {
+            color: #f4a261;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .lead-magnet p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .pdf-preview {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .pdf-preview img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .benefits-list {
+            text-align: left;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .benefits-list li::before {
+            content: "✓";
+            color: #f4a261;
+            font-weight: bold;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .email-form {
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .email-form input {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .email-form input:focus {
+            outline: 3px solid #f4a261;
+        }
+
+        .email-form button {
+            width: 100%;
+            background: #e76f51;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 111, 81, 0.4);
+        }
+
+        .email-form button:hover {
+            background: #d45a3c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 111, 81, 0.6);
+        }
+
+        .privacy-note {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
         .bonus-content {
             max-width: 800px;
             margin: 0 auto;
@@ -682,6 +790,45 @@
                     el estándar de oro en certificación cervecera reconocido internacionalmente. Su experiencia y conocimiento garantizan 
                     una formación de calidad para prepararte en el fascinante mundo de la cerveza.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-magnet">
+        <div class="container">
+            <div class="lead-magnet-box">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📖</div>
+                <h2>Descarga GRATIS</h2>
+                <p style="font-size: 1.3rem; font-weight: bold; color: #f4a261; margin-bottom: 2rem;">La Guía del Cervecero Ecuatoriano</p>
+                
+                <p>Antes de inscribirte al curso, queremos regalarte algo valioso:</p>
+                
+                <ul class="benefits-list">
+                    <li>Los 5 estilos de cerveza que todo ecuatoriano debe conocer</li>
+                    <li>Cómo degustar cerveza como un profesional certificado</li>
+                    <li>Mapa de las mejores cervecerías artesanales del país</li>
+                    <li>Glosario de términos para sonar como un experto</li>
+                    <li>Tips exclusivos de instructores Cicerone®</li>
+                </ul>
+
+                <div class="pdf-preview">
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%); padding: 40px; border-radius: 5px; color: white;">
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🍺</div>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #f4a261;">LA GUÍA DEL CERVECERO ECUATORIANO</div>
+                        <div style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">10 páginas de conocimiento cervecero</div>
+                    </div>
+                </div>
+
+                <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Descárgala ahora - Es 100% GRATIS 🎁</p>
+
+                <form class="email-form" action="mailto:cervatanascraftbeers@gmail.com" method="POST" enctype="text/plain">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <input type="hidden" name="_subject" value="Nueva descarga - Guía del Cervecero">
+                    <button type="submit">📥 Descargar Guía Gratis</button>
+                </form>
+
+                <p class="privacy-note">🔒 Tu información está segura. No spam. Solo contenido de valor sobre cerveza.</p>
             </div>
         </div>
     </section>
